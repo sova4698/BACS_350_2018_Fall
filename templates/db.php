@@ -7,7 +7,7 @@
     $username = 'uncobacs_350';
     $password = 'BACS_350';
 
-    echo "<h1>DB Connection</h1>" .
+    echo "<h2>DB Connection</h2>" .
         "<p>Connect String:  $db_connect, $username, $password</p>";
 
 

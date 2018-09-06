@@ -54,17 +54,15 @@
             * Use Github Desktop to commit your changes
             * Push to your remote repo
 
-            Simple page
-            * Use the simple.php page template to create project/08/index.php
-            * Deploy and test
-            * Add stylesheet, and images last (see what happens)
-
             Stylish page
+            * Use the page.php page template to create project/08/index.php
             * User the header and footer templates to create a better page
             * Deploy and test
+            * Add stylesheet and image files (see what happens)
 
             Validate HTML
             * Use the HTML validator to make sure that we have good HTML
+            * Bookmark for later
 
             Connect to Database
             * Use db.php template to create a database connection
