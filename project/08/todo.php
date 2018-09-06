@@ -1,14 +1,12 @@
-<?php
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Project #8 - To Do List</title>
+    </head>
+    <body>
+        <h1>Project #8 - To Do List</h1>
 
-    // Setup a page title variable
-    $page_title = "Project #7 - To Do List";
-
-    // Include the page start
-    include 'header.php';
-
-    // Include the main page content
-    echo 
-        '<h1>BACS 350 - Project #7</h1>
         <h2>Project Description</h2>
         <p>Build an application that manages a list of subscribers.</p>
         <p>User Views:</p>
@@ -16,16 +14,15 @@
             <li>subscribers - shows a list with add button</li>
             <li>add - shows a form with name and email fields</li>
         </ul>
-        ';
-
-    echo 
-        '<h2>Project Features - Done</h2>
-        
-        <pre></pre>';
 
 
-    echo 
-        '<h2>Project Features - To Build</h2>
+        <h2>Project Features - Done</h2>
+
+        <pre>
+        </pre>
+
+
+        <h2>Project Features - To Build</h2>
 
         <pre>
 
@@ -110,9 +107,6 @@
             Submit your URL in Canvas
             * Post project/08/index.php
 
-        </pre>';
-
-    // Include the page end
-    include 'footer.php';
-
- ?>
+        </pre>
+    </body>
+</html>
