@@ -16,10 +16,12 @@
 
         <header>
             <h1>
+                <img src="/bacs_350/images/Bear3.png">
+
                 <?php
                     echo $page_title;
                 ?>
             </h1>
         </header>
         <main>
-            <p>The text content of the page.</p>
+            <a href="/bacs_350">Home</a>

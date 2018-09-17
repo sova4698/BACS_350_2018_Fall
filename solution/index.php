@@ -1,25 +1,52 @@
-<?php
+<?php 
 
-    echo '
-    
-    <h1>Simplest possible PHP file</h1>
+    $page_title = "BACS 350 - Solutions";
 
-    <h2>Simple Page Demo</h2>
-
-    <p>
-        <a href="http://localhost/PhpApps/solution">Simple Page - localhost</a>
-    </p>
-
-    <p>
-        <a href="http://unco-bacs.org/bacs_350/solution">Simple Page - UNC BACS</a>
-    </p>
-
-    <p>
-        <a href="http://xxxxxxxx/project/index.php">My Projects</a>
-    </p>
-
-    ';
-
-
+    include "../header.php"; 
 
 ?>
+
+    <!--  Your code goes here -->
+    
+    <h1>BACS 350 - Solutions</h1>
+
+    
+    <p>All of the solutions to the projects in BACS 350 teach important skills.</p>
+   
+    <p>This page also includes a stylesheet.</p>
+
+    <h2>Solutions and Skills</h2>
+    <ul>
+        <li>
+            <a href="01">1. Hosting</a>
+        </li>
+        <li>
+            <a href="02">2. Includes</a>
+       </li>
+        <li>
+            <a href="03">3. Variables</a>
+        </li>
+        <li>
+            <a href="04">4. Databases</a>
+        </li>
+        <li>
+            <a href="05">5. Forms</a>
+        </li>
+        <li>
+            <a href="06">6. Database Connection</a>
+        </li>
+        <li>
+            <a href="07">7. List Records</a>
+        </li>
+        <li>
+            <a href="08">8. Add Records</a>
+        </li>
+        <li>
+            <a href="09">9. App UI</a>
+        </li>
+        <li>
+            <a href="10">10. Testing</a>
+        </li>
+    </ul>
+
+<?php include "../footer.php"; ?>

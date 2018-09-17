@@ -2,15 +2,12 @@
 
     $page_title = "BACS 350 - Project #4 - Databases";
 
-    include "header.php"; 
+    include "../../header.php"; 
 
 ?>
 
     <!--  Your code goes here -->
-    <a href="../..">Home</a>
     <h1>BACS 350 - Project #4 - Databases</h1>
-
-    <img src="Bear3.png">
 
     <h2>Bluehost Links</h2>
     <ul>
@@ -36,4 +33,4 @@
         );
     </pre>
 
-<?php include "footer.php"; ?>
+<?php include "../../footer.php"; ?>
