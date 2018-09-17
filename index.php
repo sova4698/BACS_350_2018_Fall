@@ -15,13 +15,13 @@
             <h2> Website Projects</h2>
             <ul>
                 <li>
-                    <a href="project/01/index.php">Exercise #1</a>
+                    <a href="solution/01/index.php">Project #1</a>
                 </li>
                 <li>
-                    <a href="project/02/index.php">Exercise #2</a>
+                    <a href="solution/02/index.php">Project #2</a>
                 </li>
                 <li>
-                    <a href="project/03/index.php">Exercise #3</a>
+                    <a href="solution/03/index.php">Project #3</a>
                 </li>
             </ul>
 
