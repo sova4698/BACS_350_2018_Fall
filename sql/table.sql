@@ -11,4 +11,3 @@ CREATE TABLE log (
   text varchar(100) NOT NULL,
   PRIMARY KEY (id),
 );
-
