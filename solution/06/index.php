@@ -1,8 +1,8 @@
 <?php
 
     // Start the page
-    $page_title = 'BACS 350 - Project #6';
-    require_once 'header.php';
+    $page_title = 'BACS 350 - Project #6 - Database Connect';
+    require_once '../../header.php';
 
     
     // Form the DB Connection string
@@ -14,7 +14,7 @@
     
 
     // Open the database or die
-    echo "<h2>DB Connection</h2>" .
+    echo "<h2>How to Connect to your Database</h2>" .
         "<p>Connect String:  $db_connect, $username, $password</p>";
 
     try {
@@ -26,24 +26,7 @@
     }
 
 
-    // Query for all subscribers
-    echo "<h2>Subscribers</h2>";
-    $query = "SELECT * FROM subscribers";
-
-    $statement = $db->prepare($query);
-    $statement->execute();
-
-
-    // Loop over all of the subscribers to make a bullet list
-    $subscribers = $statement->fetchAll();
-    echo '<ul>';
-    foreach ($subscribers as $s) {
-        echo '<li>' . $s['name'] . ', ' . $s['email'] . '</li>';
-    }
-    echo '</ul>';
-
-
     // End the page
-    require_once 'footer.php';
+    require_once '../../footer.php';
 
 ?>

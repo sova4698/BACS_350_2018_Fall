@@ -7,14 +7,14 @@
     $username = 'uncobacs_350';
     $password = 'BACS_350';
 
-    echo "<h1>DB Connection</h1>" .
-        "<p>Connect String:  $db_connect, $username, $password</p>";
+//    echo "<h2>DB Connection</h2>" .
+//        "<p>Connect String:  $db_connect, $username, $password</p>";
 
 
     // Open the database or die
     try {
         $db = new PDO($db_connect, $username, $password);
-        echo '<p><b>Successful Connection</b></p>';
+//        echo '<p><b>Successful Connection</b></p>';
     } catch (PDOException $e) {
         $error_message = $e->getMessage();
         echo "<p>Error: $error_message</p>";

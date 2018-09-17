@@ -10,12 +10,13 @@
     $statement = $db->prepare($query);
     $statement->execute();
 
+    echo '<h2>Subscribers in List</h2>';
 
     // Loop over all of the subscribers to make a bullet list
     $subscribers = $statement->fetchAll();
     echo '<ul>';
     foreach ($subscribers as $s) {
-        echo '<li>' . $s['name'] . ', ' . $s['email'] . '</li>';
+        echo '<li>' . $s['id'] . ', ' . $s['name'] . ', ' . $s['email'] . '</li>';
     }
     echo '</ul>';
 

@@ -16,7 +16,7 @@
 
         <header>
             <h1>
-                <img src="/bacs_350/images/Bear3.png">
+                <img src="/bacs_350/images/Bear3.png" alt="Bear Logo"/>
 
                 <?php
                     echo $page_title;
