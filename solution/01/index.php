@@ -1,23 +1,22 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>Project #1</title>
-    </head>
-    <body>
+<?php
 
-        <h1>Wanted Dead or Alive</h1>
-        <p> Test the server setup</p>
-        <?php
-            echo "My name is Enigo Montoya";
-        ?>
-        <img src='inigo.jpg'>
+    echo '
+    
+    <h1>BACS 350 - Project #1 - Hosting</h1>
 
-        <h2>Links</h2>
-        <ul>
-            <a href="index.html">index.html</a> - Reload this web page
-            <a href="index.php">index.php</a> - Load a dynamic web page
-            <a href=".">This directory</a> - Notice which file loads.
-        </ul>
-    </body>
-</html>
+    <p>
+        PHP is a preprocessor that converts PHP Scripts into HTML.
+        A valid PHP file should produce valid HTML output.
+    </p>
+
+    <p>
+        A Bluehost server will process PHP files or HTML files.  The suffix dictates whether the code is converted to HTML.
+    </p>
+
+    <p>
+        <a href="http://unco-bacs.org/index.php">My Web Hosting - unco-bacs.org</a>
+    </p>
+
+    ';
+
+?>
