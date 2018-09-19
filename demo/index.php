@@ -5,9 +5,10 @@
     require_once 'header.php';
 
 
-//
-//    // Show the list after the insert
-//    require 'select.php';
+    // Show the list after the insert
+    require 'select.php';
+
+
 //
 //    echo '<p>NOTE: You may need to refresh this page in order to get the current list from the database.</p>'
 //
