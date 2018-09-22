@@ -14,9 +14,9 @@
     // Add a record
     echo '<form action="insert.php" method="get">
         
-        <p><label>Title:</label> &nbsp; <input type="text" name="title"></p>
-        <p><label>Author:</label> &nbsp; <input type="text" name="author"></p>
-        <p><label>Summary:</label> &nbsp; <input type="text" name="summary"></p>
+        <p><label>Name:</label> &nbsp; <input type="text" name="name"></p>
+        <p><label>Address:</label> &nbsp; <input type="text" name="address"></p>
+        <p><label>Phone:</label> &nbsp; <input type="text" name="phone"></p>
         
         <p><input type="submit" value="Add New Contact"/></p>
         

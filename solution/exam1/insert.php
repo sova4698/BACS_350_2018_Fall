@@ -5,22 +5,22 @@
 
 
     // Pick out the inputs
-    $title = filter_input(INPUT_GET, 'title');
-    $author = filter_input(INPUT_GET, 'author');
-    $summary = filter_input(INPUT_GET, 'summary');
+    $name    = filter_input(INPUT_GET, 'name');
+    $address = filter_input(INPUT_GET, 'address');
+    $phone   = filter_input(INPUT_GET, 'phone');
 
 
     // Show if insert is successful or not
     try {
         
         // Add database row
-        $query = "INSERT INTO books (title, author, summary) VALUES (:title, :author, :summary);";
+        $query = "INSERT INTO books (name, address, phone) VALUES (:name, :address, :phone);";
 
         $statement = $db->prepare($query);
 
-        $statement->bindValue(':title', $title);        
-        $statement->bindValue(':author', $author);
-        $statement->bindValue(':summary', $summary);
+        $statement->bindValue(':name',    $name);
+        $statement->bindValue(':address', $address);
+        $statement->bindValue(':phone',   $phone);
 
         $statement->execute();
         $statement->closeCursor();

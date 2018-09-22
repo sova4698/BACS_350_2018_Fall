@@ -50,6 +50,9 @@
         <li>
             <a href="13">13. Apps</a>
         </li>
+        <li>
+            <a href="exam1">Exam - Contact Manager App</a>
+        </li>
     </ul>
 
 <?php include "../footer.php"; ?>
