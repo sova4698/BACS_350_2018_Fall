@@ -36,7 +36,18 @@
         <p>Study the source code in "solution/14/step-2" to understand how to define usable page structure.</p>
         <p>Make sure that you have pulled fresh changes from <b>Mark-Seaman/BACS_350_2018_Fall</b> repo.</p>
 
+
+        <h3>Connect to Local Database</h3>
+
+
     ';
+
+
+    // Attempt to connect
+    require_once 'subscriber_db.php';
+    local_connect();
+//    remote_connect();
+
 
 
     // Show links for page testing

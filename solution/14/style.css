@@ -65,3 +65,8 @@ header .logo {
     width: 240px;
     height: 280px;
 }
+
+.card {
+    border: 1px solid black;
+    padding: 20px;
+}
