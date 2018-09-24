@@ -33,6 +33,4 @@
 
     }
 
-    $db = subscribers_connect();
-
 ?>
