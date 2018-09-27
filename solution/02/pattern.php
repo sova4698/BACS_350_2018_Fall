@@ -45,17 +45,6 @@
         include 'footer.php';
     </pre>
 
-
-    <h2>Discussion</h2>
-
-    <p>
-
-    </p>
-
-    <ul>
-        <li></li>
-    </ul>
-
  <?php
    // End the page
     end_page();
