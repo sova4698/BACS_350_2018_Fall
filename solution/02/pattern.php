@@ -1,13 +1,11 @@
-<?php
-
-    // Start the page
-    require_once '../views.php';
-
+<?php 
     $page_title = 'Include Design Pattern';
-    begin_page($page_title);
-?>
+    include "header.php"; 
+ ?>
 
-<h1></h1>
+<!--  Your code goes here -->
+
+<h1>Include Design Pattern</h1>
 <p><a href="..">Solutions</a></p>
 <p><a href=".">Includes</a></p>
 
@@ -63,6 +61,6 @@
 </pre>
 
 <?php
-   // End the page
-    end_page();
+    // End the page
+    include "footer.php";
 ?>

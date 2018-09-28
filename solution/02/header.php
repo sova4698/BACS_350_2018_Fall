@@ -16,6 +16,7 @@
 
     <header>
         <h1>
+            <img src="Bear3.png">
             <?php  echo $page_title; ?>
         </h1>
     </header>
