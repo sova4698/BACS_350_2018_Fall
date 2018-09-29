@@ -4,7 +4,7 @@
         begin_page -- Create the HTML for the beginning of a page.  Add a page title and headline.
     */
 
-    function begin_page($page_title) {
+    function begin_page($site_title, $page_title) {
 
         echo '
             <!DOCTYPE html>
@@ -20,10 +20,9 @@
                 <body>
 
                     <header>
-                        <h1>
-                            <img src="Bear.png" alt="Bear Logo"/>
-                            ' . $page_title . '
-                        </h1>
+                        <img src="Bear.png" alt="Bear Logo"/>
+                        <h1>' . $site_title . '</h1>
+                        <h2>' . $page_title . '</h2>
                     </header>
                     <main>
         ';

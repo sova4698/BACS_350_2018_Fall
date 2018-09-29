@@ -1,13 +1,16 @@
 <?php
 
-    // Setup a page title variable
-    $page_title = "BACS 350 - Project #5 - Form View";
+    // Start the page
+    include '../../views.php';
 
-    // Include the page start
-    include '../../header.php';
-?>
+    $site_title = 'BACS 350 - Demo Server';
+    $page_title = 'Form Input Design Pattern';
+    begin_page($site_title, $page_title);
 
-    <h2>UI for form input using POST</h2>
+
+    // Your content goes here
+
+    echo '<h2>Form using POST</h2>
 
     <form action="welcome.php" method="post">
         
@@ -15,9 +18,10 @@
         
         <p><input type="submit" value="Save"/></p>
         
-    </form>
+    </form>';
 
-<?php
-    // Include the page end
-    include '../../footer.php';
+
+    // End the page
+    end_page();
+
 ?>
