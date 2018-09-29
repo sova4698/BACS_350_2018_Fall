@@ -1,7 +1,7 @@
 <?php 
 
 // Start the page
-    require_once 'views.php';
+    require_once '../../views.php';
 
     $site_title = 'BACS 350 - Demo Server';
     $page_title = 'Database Design Pattern';
@@ -11,7 +11,6 @@
     // Your page content goes here
 
     echo '
-        <h1>BACS 350 - Project #4 - Databases</h1>
 
         <h2>Bluehost Links</h2>
         <ul>
