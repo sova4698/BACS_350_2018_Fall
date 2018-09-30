@@ -1,6 +1,6 @@
 <?php 
 
-// Start the page
+    // Start the page
     require_once '../../views.php';
 
     $site_title = 'BACS 350 - Demo Server';
@@ -35,6 +35,14 @@
               PRIMARY KEY (id),
             );
         </pre>
+        
+        
+        <h2>Learn more</h2>
+        <ul>
+            <li><a href="..">Other Demos</a></li>
+            <li><a href="https://seamansguide.com/guide/PhpApps/docs/Database.md">Database Design Pattern</a></li> 
+        </ul>
+
     ';
 
 
@@ -42,4 +50,3 @@
     end_page();
 
 ?>
-

@@ -10,15 +10,23 @@
 
     // Your content goes here
 
-    echo '<h2>Form using POST</h2>
+    echo '
+        <h2>Form using POST</h2>
 
-    <form action="welcome.php" method="post">
-        
-        <p><label>What is your name?</label> &nbsp; <input type="text" name="my_name"></p>
-        
-        <p><input type="submit" value="Save"/></p>
-        
-    </form>';
+        <form action="welcome.php" method="post">
+
+            <p><label>What is your name?</label> &nbsp; <input type="text" name="my_name"></p>
+
+            <p><input type="submit" value="Save"/></p>
+
+        </form>
+
+        <h2>Learn more</h2>
+            <ul>
+                <li><a href="..">Other Demos</a></li>
+                <li><a href="https://seamansguide.com/guide/PhpApps/docs/Forms.md">Forms Design Pattern</a></li> 
+            </ul>
+        ';
 
 
     // End the page

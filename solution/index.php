@@ -69,13 +69,23 @@
                 <a href="15">15. Local and Remote</a> - Create apps locally and redeploy them remotely. Page redirect.
             </li>
             <li>
-                <a href="16">16. Building Apps</a> - Complete App Development.
+                <a href="16">16. File Viewer</a> - Directory listing and code viewer.
             </li>
-
+            <li>
+                <a href="17">17. Dynamic List</a> - Associative arrays in memory.
+            </li>
+            <!--
+            <li>
+                <a href="18">18. Bear Notes</a> - .
+            </li>
+            <li>
+                <a href="19">19. Template Engine</a> - HTML with Variable insertion.
+            </li>
+            -->
         </ul>
     ';
 
 
-    include "../footer.php"; 
+    end_page(); 
 
 ?>
