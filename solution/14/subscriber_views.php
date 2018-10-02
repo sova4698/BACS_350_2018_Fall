@@ -7,8 +7,9 @@
     function add_subscriber_form() {
         
         echo '
-            <h2>Add Subscriber</h2>
             <div class="card">
+                <h3>Add Subscriber</h3>
+            
                 <form action="insert.php" method="get">
                     <p><label>Name:</label> &nbsp; <input type="text" name="name"></p>
                     <p><label>Email:</label> &nbsp; <input type="text" name="email"></p>
@@ -36,12 +37,17 @@
  
     function render_list($list) {
 
-        echo '<h2>Subscribers in List</h2> 
-              <ul>';
+        echo '
+            <div class="card">
+                <h3>Subscribers in List</h3> 
+                <ul>
+            ';
         foreach ($list as $s) {
             echo '<li>' . $s['id'] . ', ' . $s['name'] . ', ' . $s['email'] . '</li>';
         }
-        echo '</ul>';
+        echo '
+                </ul>
+            </div>';
     
     }
     
