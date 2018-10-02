@@ -1,31 +1,78 @@
- <?php
+<?php
 
     // Start the page
-    $page_title = 'BACS 350 - Project #14 - MVC Pattern';
-    require_once '../../header.php';
+    require_once '../views.php';
 
+    $page_title = 'MVC Pattern - Step 3';
+    begin_page($page_title);
+
+
+    // Page Content
     echo '
-        <h1>Model - View - Controller</h1>
+        <p><a href="..">MVC Pattern</a></p>
+        <h2>Step 3 - Database CRUD</h2>
 
+        <h3>DB Connect Pattern</h3>
         <p>
-            The MVC Pattern is a design pattern that makes your code easier to read by adding consistency.
-            This solution is built in a series of steps so that you can see the progression toward the
-            final answer.   Repeat these same steps in building your code.
+            The Database CRUD Pattern is a design pattern that encapsulates the basic
+            operations required for any datatype.
         </p>
-        <p>Steps to MVC</p>
+        <p>
+            CRUD Operations
+        </p>
         <ul>
-            <li><a href="step-1">Step 1 - Page Style and Structure</a></li>
-            <li><a href="step-2">Step 2 - Database Connection</a></li>
-            <li><a href="step-3">Step 3 - CRUD</a></li>
-            <li><a href="step-4">Step 4 - Views</a></li>
-            <li><a href="step-5">Step 5 - Controller</a></li>
-            <li><a href="step-6">Step 6 - Testing</a></li>
+            <li>CREATE - Uses a SQL INSERT statement to create a new record.</li>
+            <li>READ - Uses a SQL SELECT statement to query for records.</li>
+            <li>UPDATE - Uses a SQL UPDATE statement to edit the content of a record.</li>
+            <li>DELETE - Uses a SQL DELETE statement to delete records in the database.</li>
         </ul>
+        <p>
+            There are two separate connection functions to connect using the appropriate options for
+            the database server that you are using.
+        </p>
+        <pre>
+            Usage:
+                // Use the subscriber database
+                require_once \'subscriber_db.php\';
+
+                // Operations
+                insert_subscriber ($name, $email);        // CREATE
+                list_subscribers ($name, $email);         // READ
+                update_subscriber ($id, $name, $email);   // UPDATE
+                delete_subscriber ($id);                  // DELETE
+        </pre>
+
+        <h3>Source Code</h3>
+        <p>Study the source code in "solution/14/step-3" to understand how to define standard database operations.</p>
+        <p>Make sure that you have pulled fresh changes from <b>Mark-Seaman/BACS_350_2018_Fall</b> repo.</p>
+
+
+        <h3>Connect to Local Database</h3>
 
     ';
 
 
-    // End the page
-    require_once '../../footer.php';
+    // Attempt to connect
+    require_once 'subscriber_db.php';
+//    $db = local_connect();
+    $db =  remote_connect();
 
+    list_subscribers ();
+
+
+    // Sign Up Form
+    echo '<div class="card"><form action="insert.php" method="get">
+
+        <p><label>Name:</label> &nbsp; <input type="text" name="name"></p>
+        <p><label>Email:</label> &nbsp; <input type="text" name="email"></p>
+        <p><input type="submit" value="Sign Up"/></p>
+    </form></div>';
+
+
+    // Show links for page testing
+//    require 'test.php';
+
+
+    // End the page
+    end_page();
 ?>
