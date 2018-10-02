@@ -11,8 +11,9 @@
     // Page Content
     echo '<p><a href="pattern.php">MVC Pattern</a></p>';
 
+    
 
-    // Use subcriber code
+    // Use subscriber code
     require_once 'subscriber_views.php';
     require_once 'subscriber_db.php';
 

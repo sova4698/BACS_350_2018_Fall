@@ -1,5 +1,9 @@
 <?php
 
+    /* -------------------------------
+        DB CONNECT
+    ------------------------------- */
+
     // Connect to the remote database
     function remote_connect() {
 
@@ -45,13 +49,15 @@
 
     // Open the database or die
     function subscribers_connect() {
-        $remote = true;
+        
+        $remote = ($_SERVER['SERVER_NAME'] == 'unco-bacs.org');
         if ($remote) {
             return remote_connect();
         } 
         else {
             return local_connect();
         }
+        
     }
 
 
@@ -82,11 +88,13 @@
             echo "<p>Error: $error_message</p>";
             die();
         }
+        
     }
 
 
     // Delete all database rows
     function clear_subscribers($db, $success) {
+        
         try {
             $query = "DELETE FROM subscribers";
             $statement = $db->prepare($query);
