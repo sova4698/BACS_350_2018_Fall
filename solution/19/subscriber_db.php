@@ -29,10 +29,10 @@
     // Open the database or die
     function db_connect($db_connect, $username, $password) {
         
-         echo "<h2>DB Connection</h2><p>Connect String:  $db_connect, $username, $password</p>";
+//        echo "<h2>DB Connection</h2><p>Connect String:  $db_connect, $username, $password</p>";
         try {
             $db = new PDO($db_connect, $username, $password);
-             echo '<p><b>Successful Connection</b></p>';
+//             echo '<p><b>Successful Connection</b></p>';
             return $db;
         } catch (PDOException $e) {
             $error_message = $e->getMessage();
@@ -46,12 +46,12 @@
     // Open the database or die
     function subscribers_connect() {
         
-        $remote = ($_SERVER['SERVER_NAME'] == 'unco-bacs.org');
-        if ($remote) {
-            return remote_connect();
+        $local = ($_SERVER['SERVER_NAME'] == 'localhost');
+        if ($local) {
+            return local_connect();
         } 
         else {
-            return local_connect();
+            return remote_connect();
         }
         
     }

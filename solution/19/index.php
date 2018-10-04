@@ -17,16 +17,16 @@
     require_once 'subscriber.php';
 
 
-    // Create a list object and connect to the database
-    $subscribers = new Subscribers;
-
-
     // Render a list of subscribers
     $subscribers->show_subscribers();
     
 
     // Show the add form
     $subscribers->add_form();
+
+
+    // Button to clear
+    echo '<a href="delete.php">Reset Subscribers</a>';
 
 
     end_page();

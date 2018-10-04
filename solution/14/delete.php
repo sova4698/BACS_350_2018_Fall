@@ -1,6 +1,6 @@
 <?php
 
-    // Connect to the database
+ // Connect to the database
     require_once 'subscriber_db.php';
     $db = subscribers_connect();
 
