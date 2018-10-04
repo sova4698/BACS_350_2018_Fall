@@ -19,25 +19,24 @@
         }
 
         
+        // CRUD
+        
         function query() {
             return query_subscribers($this->db);
         }
         
     
         function clear() {
-            if (clear_subscribers($this->db)) {
-                //echo '<p><b>Clear successful</b></p>';
-                header("Location: index.php");
-            }
+            return clear_subscribers($this->db);
         }
+        
         
         function add($name, $email) {
-            if (add_subscriber ($this->db, $name, $email)) {
-                //echo '<p><b>Insert successful</b></p>';
-                header("Location: index.php");
-            }
+            return add_subscriber ($this->db, $name, $email);
         }
         
+        
+        //Views
         
         function show_subscribers() {
             render_list($this->query());

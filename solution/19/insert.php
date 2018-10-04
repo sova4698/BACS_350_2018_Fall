@@ -1,15 +1,21 @@
 <?php
 
+    header("Pragma: no-cache");
+    header("Cache-Control: no-store, no-cache, must-revalidate");
+
     // Connect to the database
     require_once 'subscriber.php';
 
 
     // Pick out the inputs
-    $name  = filter_input(INPUT_GET, 'name');
-    $email = filter_input(INPUT_GET, 'email');
+    $name  = filter_input(INPUT_POST, 'name');
+    $email = filter_input(INPUT_POST, 'email');
 
 
     // Add record
-    $subscribers->add ($name, $email);
-
+    if ($subscribers->add ($name, $email)) {
+//      echo '<p><b>Insert successful</b>&nbsp;<a href="index.php">Subscribers</a></p>';
+//      $this->query();
+        header("Location: index.php");
+    }
 ?>
