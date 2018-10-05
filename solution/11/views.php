@@ -47,14 +47,4 @@
         
     }
 
-
-    /*
-        render_simple_page -- Create the HTML page.
-    */
-
-    function render_simple_page($title, $text) {
-        
-        echo "<h1>$title</h1><p>$text</p>";
-    }
-
 ?>
