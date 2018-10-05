@@ -29,7 +29,7 @@
 
         echo '
             <div class="card">
-                <h3>log in List</h3> 
+                <h3>Page Load History</h3> 
                 <ul>
             ';
         foreach ($list as $s) {
