@@ -1,29 +1,8 @@
 <?php
-
-    echo '
-        
-        <h4>Demo 1 - Text Match</h4>
-        
-        <p>Code</p>
-        <pre>
-            $text = "A stitch in time saves five.";
-            $regex = "/five/";
-            if (preg_match($regex, $text)) {
-                  echo "Line matches: $text";
-            }
-        </pre>
-        
-        <p>Results</p>
-        <pre>
-        '; 
-
-            $text = "A stitch in time saves five.";
-            $regex = "/five/";
-            if (preg_match($regex, $text)) {
-                  echo "Line matches: $text";
-            }
-
-    echo '</pre>';
-
-
+    
+    $title = 'Demo 1 - Text Replace';
+    $code = 'str_replace("is", "at", "This is it")';
+    $result = str_replace("is", "at", "This is it");
+    show_demo_code($title, $code, $result);
+    
 ?>

@@ -1,35 +1,28 @@
 <?php
 
-echo '
-        
-        <h4>Demo 2 - Word Match</h4>
-        
-        <p>Code</p>
+    $title = 'Demo 2 - Word Match Using Regex';
+    $code = '$words = ["ban", "babble", "make", "flab"];
+$regex = "/ab/";
+$result = "";
+foreach ($words as $word) {
+   if (preg_match($regex, $word)) {
+      $result .= "$word matches!\n";
+   }
+}';
 
-        <pre>
-            $words = ["ban", "babble", "make", "flab"];
-            $regex = "/ab/";
+    $words = ["ban", "babble", "make", "flab"];
+    $regex = "/ab/";
 
-            foreach ($words as $word) {
-               if (preg_match($regex, $word)) {
-                  echo "$word matches!";
-               }
-            }
-        </pre>
-        
-        <p>Results</p>
-        <pre>
-        '; 
+    $result = "";
+    foreach ($words as $word) {
+       if (preg_match($regex, $word)) {
+          $result .= "$word matches!\n";
+       }
+    }
 
-            $words = ["ban", "babble", "make", "flab"];
-            $regex = "/ab/";
+    show_demo_code($title, $code, $result);
 
-            foreach ($words as $word) {
-               if (preg_match($regex, $word)) {
-                  echo "<p>$word matches!</p>";
-               }
-            }
-    echo '</pre>';
+    echo '</pre></div>';
 
 
 ?>

@@ -8,6 +8,25 @@
     begin_page($site_title, $page_title);
 
 
+    // Show code demo
+    function show_demo_code($title, $code, $result) {
+        echo '
+            <div class="page">
+
+                <h4>'.$title.'</h4>
+
+                <p>Code</p>
+                <pre>' . 
+                    $code . 
+                '</pre>
+
+                <p>Results</p>
+                <pre>' .
+                    $result .
+                '</pre>
+            </div>';
+    }
+
     // Page Content
     echo '<p><a href="..">Solutions</a></p>';
    
@@ -41,6 +60,8 @@
     include 'demo1.php';
     include 'demo2.php';
     include 'demo3.php';
+    include 'demo4.php';
+    include 'demo5.php';
 
 
 

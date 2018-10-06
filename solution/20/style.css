@@ -1,3 +1,7 @@
+/* -------------------
+    ELEMENT
+------------------- */
+
 body {
     font-size: 18px;
     color: #0E3D65;
@@ -43,12 +47,34 @@ li {
 
 p {
     margin: 1em;
-    padding: 1em;
+/*    padding: 1em;*/
 }
 
 pre {
+    background-color: white;
+    border: 1px solid black;
+    padding: 20px;
+    margin: 20px;
+    box-shadow: -2px -2px 5px gray;
+}
+
+
+/* -------------------
+    CLASS
+------------------- */
+
+.card {
     border: 1px solid black;
     border-radius: 20px;
     padding: 20px;
-    margin: 20px;
+    margin: 50px;
+    box-shadow: -2px -2px 5px gray;
+}
+
+.page {
+    border: 1px solid black;
+    padding: 20px;
+    margin: 50px;
+    background-color: #eeeeee;
+    box-shadow: 2px 2px 5px gray;
 }
