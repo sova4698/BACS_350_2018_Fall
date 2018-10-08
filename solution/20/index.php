@@ -62,6 +62,7 @@
     include 'demo3.php';
     include 'demo4.php';
     include 'demo5.php';
+    include 'demo6.php';
 
 
 

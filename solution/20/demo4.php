@@ -1,45 +1,25 @@
 <?php
 
-echo '
-        <div class="page">
-        
-        <h4>Demo 4 - Regex Replace</h4>
-        
-        <p>Code</p>
-        <pre>
-// Replace matching text
-$text = "A stitch in time saves five.";
+    $title = 'Demo 4 - Regex Replace';
+    $code = '$text = "A stitch in time saves nine.";
 $regex = "/\wi\we/";
-echo preg_replace($regex, "NINE", $text);
-        </pre>
-        
-        <p>Results</p>
-        <pre>'; 
+preg_replace($regex, "TIME", $text);';
 
+    // Get result
     $text = "A stitch in time saves nine.";
     $regex = "/\wi\we/";
-    $text = preg_replace($regex, "TIME", $text);
-    echo $text;
+    $result = preg_replace($regex, "TIME", $text);
 
-    echo '</pre>';
+    show_demo_code($title, $code, $result);
 
-    echo '
-        <p>Code</p>
-        <pre>
-// Numbers only
-$phoneNum = "(123) 456-7890";
-$numbersOnly = preg_replace("/\D+/", "", $phoneNum);
-echo $numbersOnly;
-        </pre>
-        
-        <p>Results</p>
-        <pre>'; 
 
+    $code = '$phoneNum = "(123) 456-7890";
+preg_replace("/\D+/", "", $phoneNum);';
+
+    // Get result
     $phoneNum = "(123) 456-7890";
-    $numbersOnly = preg_replace("/\D+/", "", $phoneNum);
-    echo $numbersOnly;
+    $result = preg_replace("/\D+/", "", $phoneNum);
 
-    echo '</pre></div>';
-
+    show_demo_code($title, $code, $result);
 
 ?>

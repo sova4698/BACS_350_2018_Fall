@@ -1,25 +1,17 @@
 <?php
 
-    echo '
-        <div class="page">
-        <h4>Demo 3 - Text Replace</h4>
-        
-        <p>Code</p>
-        <pre>
-// Replace matching text
-$text = "A stitch in time saves five.";
+    $title = 'Demo 3 - Text Replace';
+    $code = '$text = "A stitch in time saves five.";
 $regex = "/five/";
 echo preg_replace($regex, "NINE", $text);
-        </pre>
-        
-        <p>Results</p>
-        <pre>'; 
+';
 
+    // Get result
     $text = "A stitch in time saves five.";
     $regex = "/five/";
-    echo preg_replace($regex, "NINE", $text);
+    $result = preg_replace($regex, "NINE", $text);
 
-    echo '</pre></div>';
 
+    show_demo_code($title, $code, $result);
 
 ?>
