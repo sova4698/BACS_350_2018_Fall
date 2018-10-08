@@ -18,6 +18,9 @@
         <a href="solution">Project Solutions</a>
     </li>
     <li>
+        <a href="project">My Projects</a>
+    </li>
+    <li>
         <a href="templates">Code Templates</a>
     </li>
 
