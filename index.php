@@ -1,6 +1,5 @@
 <?php 
     require_once 'views.php';
-
     $page_title = 'BACS 350 - Demo Server';
     begin_page($page_title, 'Home');
 ?>

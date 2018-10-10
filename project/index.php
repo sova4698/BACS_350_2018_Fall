@@ -20,12 +20,10 @@
     $path = '.';
     $dirs = get_dir_list($path);
 
-    echo '<h2>Files in Templates Directory</h2>';
-
     // List the files as links
-    if (count($dirs) == 0) :
+    if (count($dirs) == 0) {}
         echo '<p>No images uploaded.</p>';
-    else:
+    } else {
         echo '<ul>';
 
         foreach($dirs as $d) {
@@ -36,7 +34,7 @@
         }
 
         echo '</ul>';
-    endif;
+    }
 
      
     end_page();
