@@ -16,6 +16,16 @@
     require_once 'subscriber.php';
     
 
+    /* 
+        This code used to be in the file "insert.php".
+        The old solution required a different page to be written.
+        After a successful SQL INSERT there was a redirect back
+        to the index.php page.
+        
+        This new solution uses a single page.
+    */
+
+
     // Show the add form
     $action = filter_input(INPUT_POST, 'action');
     if ($action == 'add') {
@@ -25,6 +35,8 @@
         $subscribers->add($name, $email);
     }
 
+    // $subscribers->handle_add($name, $email);
+
 
     // Render a list of subscribers
     $subscribers->show_subscribers();
@@ -32,10 +44,6 @@
 
     // Show the add form
     $subscribers->add_form();
-
-
-    // Button to clear
-    echo '<a href="delete.php">Reset Subscribers</a>';
 
 
     end_page();

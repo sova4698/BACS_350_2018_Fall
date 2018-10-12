@@ -35,8 +35,16 @@
             return add_subscriber ($this->db, $name, $email);
         }
         
+        function handle_add() {
+            $action = filter_input(INPUT_POST, 'action');
+            if ($action == 'add') {
+                $name  = filter_input(INPUT_POST, 'name');
+                $email = filter_input(INPUT_POST, 'email');
+                $this->add($name, $email);
+            }
+        }
         
-        //Views
+        // Views
         
         function show_subscribers() {
             render_list($this->query());
