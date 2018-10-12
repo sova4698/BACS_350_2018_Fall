@@ -35,7 +35,7 @@
         $subscribers->add($name, $email);
     }
 
-    // $subscribers->handle_add($name, $email);
+    // $subscribers->handle_add();
 
 
     // Render a list of subscribers
