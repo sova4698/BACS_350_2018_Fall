@@ -57,4 +57,21 @@
         echo "<h1>$title</h1><p>$text</p>";
     }
 
+
+    // render_list -- Loop over all of the log to make a bullet list
+    function render_list($list) {
+
+        echo '
+            <div class="card">
+                <h3>Page Load History</h3> 
+                <ul>
+            ';
+        foreach ($list as $s) {
+            echo '<li>' . $s['id'] . ', ' . $s['date'] . ', ' . $s['text'] . '</li>';
+        }
+        echo '
+                </ul>
+            </div>';
+    
+    }
 ?>

@@ -21,27 +21,4 @@
         
     }
 
-
-    
-    /*
-        render_list -- Loop over all of the subscribers to make a bullet list
-    */
- 
-    function render_list($list) {
-
-        echo '
-            <div class="card">
-                <h3>Subscribers in List</h3> 
-                <ul>
-            ';
-        foreach ($list as $s) {
-            echo '<li>' . $s['id'] . ', ' . $s['name'] . ', ' . $s['email'] . '</li>';
-        }
-        echo '
-                </ul>
-            </div>';
-    
-    }
-    
-
 ?>

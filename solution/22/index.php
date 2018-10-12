@@ -35,6 +35,10 @@
     }
     ---------------------------------------- */
 
+    require_once 'log.php';
+    $log->log("Subscriber Page");
+
+    // $log->show_log();
 
     // Add record from form
     $subscribers->handle_add();
