@@ -26,16 +26,16 @@
     */
 
 
-    // Show the add form
-    $action = filter_input(INPUT_POST, 'action');
-    if ($action == 'add') {
-        // Pick out the inputs
-        $name  = filter_input(INPUT_POST, 'name');
-        $email = filter_input(INPUT_POST, 'email');
-        $subscribers->add($name, $email);
-    }
+//    // Show the add form
+//    $action = filter_input(INPUT_POST, 'action');
+//    if ($action == 'add') {
+//        // Pick out the inputs
+//        $name  = filter_input(INPUT_POST, 'name');
+//        $email = filter_input(INPUT_POST, 'email');
+//        $subscribers->add($name, $email);
+//    }
 
-    // $subscribers->handle_add($name, $email);
+     $subscribers->handle_add();
 
 
     // Render a list of subscribers
