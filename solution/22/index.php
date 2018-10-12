@@ -16,15 +16,14 @@
     require_once 'subscriber.php';
     
 
-    /* 
+    /* -----------------------------------------
+    
         This code used to be in the file "insert.php".
         The old solution required a different page to be written.
         After a successful SQL INSERT there was a redirect back
         to the index.php page.
         
         This new solution uses a single page.
-    */
-
 
     // Show the add form
     $action = filter_input(INPUT_POST, 'action');
@@ -34,8 +33,11 @@
         $email = filter_input(INPUT_POST, 'email');
         $subscribers->add($name, $email);
     }
+    ---------------------------------------- */
 
-    // $subscribers->handle_add();
+
+    // Add record from form
+    $subscribers->handle_add();
 
 
     // Render a list of subscribers

@@ -1,5 +1,20 @@
 <?php
 
+/* --------------------------------------      
+
+SQL for Table
+
+-- Create table subscribers: id, name, email --
+
+CREATE TABLE subscribers (
+  id int(3) NOT NULL AUTO_INCREMENT,
+  name varchar(100)  NOT NULL,
+  email varchar(100) NOT NULL,
+  PRIMARY KEY (id)
+);
+
+-------------------------------------- */
+
     // Connect to the remote database
     function remote_connect() {
 
@@ -17,7 +32,7 @@
     function local_connect() {
 
         $host = 'localhost';
-        $dbname = 'subscribers';
+        $dbname = 'bacs350';
         $username = 'root';
         $password = '';
         $db_connect = "mysql:host=$host;dbname=$dbname";
