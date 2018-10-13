@@ -1,9 +1,10 @@
 <?php
 
     /*
-        add_subscriber_form -- Create an HTML form to add record.
+        
     */
 
+    // add_subscriber_form -- Create an HTML form to add record.
     function add_subscriber_form() {
         
         echo '
@@ -19,6 +20,24 @@
             </div>
             ';
         
+    }
+
+
+    // subscriber_list_view -- Loop over all of the log to make a bullet list
+    function subscriber_list_view($list) {
+
+        echo '
+            <div class="card">
+                <h3>Subscribers</h3> 
+                <ul>
+            ';
+        foreach ($list as $s) {
+            echo '<li>' . $s['id'] . ', ' . $s['name'] . ', ' . $s['email'] . '</li>';
+        }
+        echo '
+                </ul>
+            </div>';
+    
     }
 
 ?>

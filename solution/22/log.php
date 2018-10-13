@@ -95,6 +95,7 @@
         DELETE (none)
     ---------------------------------------------- */
 
+
     // add_log_form -- Create an HTML form to add record.
     function add_log_form() {
         
@@ -111,6 +112,23 @@
         
     }
 
+
+    // render_list -- Loop over all of the log to make a bullet list
+    function render_list($list) {
+
+        echo '
+            <div class="card">
+                <h3>Page Load History</h3> 
+                <ul>
+            ';
+        foreach ($list as $s) {
+            echo '<li>' . $s['id'] . ', ' . $s['date'] . ', ' . $s['text'] . '</li>';
+        }
+        echo '
+                </ul>
+            </div>';
+     
+    }
 
     
 
@@ -156,6 +174,20 @@
         function log($text) {
             return add_log ($this->db, $text);
         }
+        
+        function log_page($page) {
+            $action = filter_input(INPUT_POST, 'action') . filter_input(INPUT_GET, 'action');
+            $text = "$page (action=$action)";
+            $this->log ($text);
+        }
+        
+        function handle_actions() {
+            $action = filter_input(INPUT_GET, 'action');
+            if ($action == 'clear') {
+                $this->clear();
+            }
+        }
+        
         
         
         // Views
