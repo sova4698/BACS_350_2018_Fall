@@ -92,11 +92,7 @@
     // -------------------------
     // Example 5
 
-    function render_article($template, $title, $body, $author) {
-        $text = file_get_contents("article.html"); 
-        $text = transform_article($text, $title, $body, $author);
-        return $text;
-    }
+    
     
     $function = '
         function render_article($template, $title, $body, $author) {
@@ -138,6 +134,65 @@
             "author" => "Abe Lincoln"));';
 
     echo demo('Example 6 - Article Settings', $function, $code);
+
+
+    // -------------------------
+    // Example 7
+
+    $settings = article_settings("Gettysburg Address", "Four score and seven years ago ...",  "Abe Lincoln");
+    $text = file_get_contents("article.html"); 
+
+    $function = '
+    function transform_text ($text, $settings) {
+        foreach ($settings as $key => $value) {
+            $text = str_replace($key,  $value,  $text);
+        }
+        return $text;
+    }
+    
+    $settings = article_settings("Gettysburg Address", 
+            "Four score and seven years ago ...", 
+            "Abe Lincoln");
+    
+    $text = transform_text($text, $settings);';
+
+    $code = 'transform_text(file_get_contents("article.html"), 
+        article_settings("Gettysburg Address", "Four score and seven years ago ...", "Abe Lincoln"));';
+
+    echo demo('Example 7 - Transform Text', $function, $code);
+
+
+    // -------------------------
+    // Example 8
+
+     $function = '
+        function render_template($template, $settings) {
+            $text = file_get_contents($template); 
+            $text = transform_text($text, $settings);
+            return $text;
+        }
+
+
+        $settings = article_settings("Gettysburg Address",  "Four score and seven years ago ...",  "Abe Lincoln");
+        
+        render_template("article.html", $settings)    
+            ';
+    $code = 'render_template("article.html", 
+        article_settings("Gettysburg Address", "Four score and seven years ago ...", "Abe Lincoln"));';
+
+
+    echo demo('Example 8 - Render Template', $function, $code);
+
+
+//    // -------------------------
+//    // Example 8
+//
+//    $function = '';
+//    $code = '"TO DO";';
+//
+//
+//    echo demo('Example 8 - Render Template', $function, $code);
+
 
 
     end_page();

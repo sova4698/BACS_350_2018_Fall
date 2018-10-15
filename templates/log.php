@@ -95,6 +95,7 @@
         DELETE (none)
     ---------------------------------------------- */
 
+
     // add_log_form -- Create an HTML form to add record.
     function add_log_form() {
         
@@ -126,8 +127,10 @@
         echo '
                 </ul>
             </div>';
-    
+     
     }
+
+    
 
     /* ----------------------------------------------
         Controller
@@ -144,6 +147,8 @@
             add form
             
     ---------------------------------------------- */
+    
+    require_once 'db.php';
 
 
     // My log list
@@ -153,7 +158,7 @@
         private $db;
 
         function __construct() {
-            $this->db =  log_connect();
+            $this->db =  connect_database();
         }
 
         
@@ -169,6 +174,20 @@
         function log($text) {
             return add_log ($this->db, $text);
         }
+        
+        function log_page($page) {
+            $action = filter_input(INPUT_POST, 'action') . filter_input(INPUT_GET, 'action');
+            $text = "$page (action=$action)";
+            $this->log ($text);
+        }
+        
+        function handle_actions() {
+            $action = filter_input(INPUT_GET, 'action');
+            if ($action == 'clear') {
+                $this->clear();
+            }
+        }
+        
         
         
         // Views
