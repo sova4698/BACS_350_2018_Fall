@@ -127,19 +127,10 @@
     // -------------------------
     // Step 7 - Render Page
 
-    function render_page($content) {
-        return render_template("page.html", array(
-                "page_title" => "Page Templates", 
-                "site_title" => "BACS 200 Demos",
-                "content"    => $content));
-    }
 
     $function = '
         function render_page($content) {
-            return render_template("page.html", array(
-                    "page_title" => "Page Templates", 
-                    "site_title" => "BACS 200 Demos",
-                    "content"    => $content));
+            return render_template("page.html", $content));
         }
         
         $gettyburg_text = array(
