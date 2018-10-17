@@ -93,6 +93,14 @@
 
 
     /*
+        render_page -- Create one HTML page from a template.
+    */
+    function render_page($settings) {
+        return render_template("page.html", $settings);
+    }
+
+
+    /*
         render_simple_page -- Create the HTML page.
     */
     function render_simple_page($title, $text) {
